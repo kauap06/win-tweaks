@@ -1,6 +1,6 @@
 # Win-Tweaks
 
-Pacote de otimizações para Windows focado em extrair o máximo do hardware, reduzir a latência (input lag) e aumentar os FPS em jogos. Inclui scripts em lote, edições no registro e utilitários portáteis que limpam e aceleram o sistema operacional.
+Pacote de otimizações para Windows focado em extrair o máximo do hardware, reduzir a latência (input lag) e aumentar os FPS em jogos. Inclui scripts em lote, edições no registro e utilitários portáteis que limpam e aceleram o sistema operacional. **(Compatível apenas para Windows 10/11)**
 
 ⚠️ **AVISO IMPORTANTE:** Modificações no sistema e no registro podem ser irreversíveis se feitas incorretamente. **Sempre crie um Ponto de Restauração** antes de executar os scripts ou programas deste repositório.
 
