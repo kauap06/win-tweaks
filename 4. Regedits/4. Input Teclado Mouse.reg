@@ -1,0 +1,54 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+;  4. Input - Teclado e Mouse
+;  Combina: Keyboard Response + StickKeys + ToggleKeys +
+;           Tempo de resposta do hover do mouse
+; ============================================================
+
+; --- Resposta do teclado (desativa filtros de acessibilidade) ---
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+"AutoRepeatDelay"="1000"
+"AutoRepeatRate"="500"
+"BounceTime"="0"
+"DelayBeforeAcceptance"="1000"
+"Flags"="0"
+"Last BounceKey Setting"=dword:00000000
+"Last Valid Delay"=dword:00000000
+"Last Valid Repeat"=dword:00000000
+"Last Valid Wait"=dword:000003e8
+
+; --- Desativar StickyKeys (evita popup ao pressionar Shift 5x) ---
+[HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
+"Flags"="0"
+
+; --- Desativar ToggleKeys (evita beep ao pressionar CapsLock) ---
+[HKEY_CURRENT_USER\Control Panel\Accessibility\ToggleKeys]
+"Flags"="0"
+
+; --- Desativar MouseKeys ---
+[HKEY_CURRENT_USER\Control Panel\Accessibility\MouseKeys]
+"Flags"="0"
+
+; --- Mouse: reduzir hover time e desativar opções desnecessárias ---
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"ActiveWindowTracking"=dword:00000000
+"Beep"="No"
+"DoubleClickHeight"="4"
+"DoubleClickSpeed"="500"
+"DoubleClickWidth"="4"
+"ExtendedSounds"="No"
+"MouseHoverHeight"="4"
+"MouseHoverTime"="10"
+"MouseHoverWidth"="4"
+"MouseSensitivity"="10"
+"MouseSpeed"="0"
+"MouseThreshold1"="6"
+"MouseThreshold2"="10"
+"MouseTrails"="0"
+"SmoothMouseXCurve"=hex:00,00,00,00,00,00,00,00,15,6e,00,00,00,00,00,00,00,40,\
+  01,00,00,00,00,00,29,dc,03,00,00,00,00,00,00,00,28,00,00,00,00,00
+"SmoothMouseYCurve"=hex:00,00,00,00,00,00,00,00,fd,11,01,00,00,00,00,00,00,24,\
+  04,00,00,00,00,00,00,fc,12,00,00,00,00,00,00,c0,bb,01,00,00,00,00
+"SnapToDefaultButton"="0"
+"SwapMouseButtons"="0"

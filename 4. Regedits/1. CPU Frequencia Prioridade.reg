@@ -1,0 +1,38 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+;  1. CPU - Frequência, Prioridade e PowerThrottling
+;  Combina: Aumentar freq da CPU + Prioridade de CPU +
+;           Desativar PowerThrottling + Aumentar Freq CPU&GPU
+; ============================================================
+
+; --- Desativar PowerThrottling (Windows Power Throttling) ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling]
+"PowerThrottlingOff"=dword:00000001
+
+; --- Prioridade de CPU (foreground apps recebem mais tempo de CPU) ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"ConvertibleSlateMode"=dword:00000000
+"Win32PrioritySeparation"=dword:00000016
+"IRQ8Priority"=dword:00000001
+"IRQ16Priority"=dword:00000002
+
+; --- CPU Core Parking: expõe o controle de parking no painel de energia ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1]
+"Attributes"=dword:00000002
+"Atributes"=dword:00000002
+
+; Valores padrão por esquema de energia (85% AC/DC para equilibrado)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1\DefaultPowerSchemeValues]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1\DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e]
+"AcSettingIndex"=dword:00000055
+"DcSettingIndex"=dword:00000055
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1\DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c]
+"AcSettingIndex"=dword:0000003c
+"DcSettingIndex"=dword:0000003c
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1\DefaultPowerSchemeValues\a1841308-3541-4fab-bc81-f71556f20b4a]
+"AcSettingIndex"=dword:0000005a
+"DcSettingIndex"=dword:0000005a

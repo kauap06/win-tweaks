@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+;  5. Serviços de Diagnóstico e Telemetria
+;  Combina: Desativar serviços de diagnóstico e telemetria
+;  Todos os serviços abaixo enviam dados à Microsoft.
+;  Start=4 = Desativado
+; ============================================================
+
+; --- Connected User Experiences and Telemetry ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+; --- Device Management Wireless Application Protocol Push-message Routing ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dmwappushservice]
+"Start"=dword:00000004
+
+; --- Diagnostic Execution Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\diagsvc]
+"Start"=dword:00000004
+
+; --- Diagnostic Policy Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DPS]
+"Start"=dword:00000004
+
+; --- Microsoft Diagnostics Hub Standard Collector Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\diagnosticshub.standardcollector.service]
+"Start"=dword:00000004
+
+; --- Diagnostic Service Host ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdiServiceHost]
+"Start"=dword:00000004
+
+; --- Diagnostic System Host ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdiSystemHost]
+"Start"=dword:00000004

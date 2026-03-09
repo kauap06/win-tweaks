@@ -1,0 +1,47 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+;  6. Serviços Extras Desnecessários
+;  Combina: Desativar serviços extras + Gerenciador de Mapas
+;  Start=4 = Desativado
+;
+;  ATENÇÃO: Leia os comentários antes de aplicar.
+;  Alguns serviços podem ser necessários dependendo do uso.
+; ============================================================
+
+; --- Windows Biometric Service (impressão digital / face ID) ---
+; ⚠ Não desative se usar login biométrico (Windows Hello)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc]
+"Start"=dword:00000004
+
+; --- Windows Font Cache Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0]
+"Start"=dword:00000004
+
+; --- Graphics Performance Monitor Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc]
+"Start"=dword:00000004
+
+; --- Windows Image Acquisition / WIA (scanner/câmera) ---
+; ⚠ Não desative se usar scanner ou câmera USB
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stisvc]
+"Start"=dword:00000004
+
+; --- Windows Error Reporting Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WerSvc]
+"Start"=dword:00000004
+
+; --- Program Compatibility Assistant Service ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
+"Start"=dword:00000004
+
+; --- Windows Event Collector ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wecsvc]
+"Start"=dword:00000004
+
+; --- Maps Broker (Gerenciador de Mapas do Windows) ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MapsBroker]
+"Start"=dword:00000004

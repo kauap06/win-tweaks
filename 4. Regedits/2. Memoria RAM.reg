@@ -1,0 +1,41 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+;  2. Memória RAM
+;  Combina: Melhoria de Memoria + Desativar Prefetch +
+;           Desativar Superfetch + Aumentar Taxa de Dados
+;  Nota: LargeSystemCache=0 é recomendado para gaming.
+;        Use =1 apenas em servidores com muita RAM livre.
+; ============================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"ClearPageFileAtShutdown"=dword:00000000
+"DisablePagingExecutive"=dword:00000001
+"LargeSystemCache"=dword:00000000
+"NonPagedPoolQuota"=dword:00000000
+"NonPagedPoolSize"=dword:00000000
+"PagedPoolQuota"=dword:00000000
+"PagedPoolSize"=dword:00000000
+"PagingFiles"=hex(7):00,00,00,00
+"SecondLevelDataCache"=dword:00000400
+"SessionPoolSize"=dword:00000004
+"SessionViewSize"=dword:00000030
+"SystemPages"=dword:ffffffff
+"PhysicalAddressExtension"=dword:00000001
+"FeatureSettings"=dword:00000001
+"thirdleveldatacache"=dword:00001800
+"iopagelocklimit"=dword:00fefc00
+"FeatureSettingsOverride"=dword:00000003
+"FeatureSettingsOverrideMask"=dword:00000003
+
+; --- Desativar Prefetch e Superfetch ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+"EnablePrefetch"=dword:00000000
+"EnableSuperfetch"=dword:00000000
+"enableboottrace"=dword:00000000
+"SfTracingState"=dword:00000001
+
+; --- Aumentar taxa de transmissão de dados na rede ---
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+"IRPStackSize"=dword:00000020
